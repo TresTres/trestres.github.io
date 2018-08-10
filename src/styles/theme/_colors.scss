@@ -1,4 +1,13 @@
 /*_colors.scss*/
 
-$night_body: #2f2f2f;
-$day_body: #c9fcfd;
+
+//use hsl 
+
+
+$morning_body: hsl(200, 97%, 28%);
+$day_body: hsl(181, 93%, 89%);
+$sunset_body: hsl(313, 82%, 27%);
+$night_body: hsl(0, 0%, 18%);
+
+$morning_menu: $morning_body + hsl(0, 0, 30%);
+

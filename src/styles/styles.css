@@ -1,29 +1,103 @@
 /*styles.scss*/
 /*_colors.scss*/
+/*fonts.scss*/
+@font-face {
+  font-family: 'Title';
+  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Menu';
+  src: url("../resources/fonts/Queen_of_Camelot.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
+
 /*app.scss*/
 /*_colors.scss*/
-.App {
-  text-align: center; }
+/*fonts.scss*/
+@font-face {
+  font-family: 'Title';
+  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+@font-face {
+  font-family: 'Menu';
+  src: url("../resources/fonts/Queen_of_Camelot.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
 
-.App-header {
-  background-color: #c9fcfd;
-  height: 150px;
-  padding: 20px;
-  color: white; }
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #c9fcfd; }
 
-.App-title {
-  font-size: 1.5em; }
+body {
+  margin: inherit;
+  padding: inherit;
+  height: inherit; }
 
-.App-intro {
-  background-color: #2f2f2f;
-  font-size: large; }
+#root {
+  margin: 0;
+  padding: 0;
+  height: inherit; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+.content {
+  width: 80%;
+  height: 100%;
+  background-color: green; }
+
+.content > .title {
+  margin: auto;
+  text-align: center;
+  white-space: pre-wrap;
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 6rem;
+  display: block; }
+
+/*sidebar.scss*/
+/*_colors.scss*/
+/*fonts.scss*/
+@font-face {
+  font-family: 'Title';
+  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Menu';
+  src: url("../resources/fonts/Queen_of_Camelot.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+.sidebar {
+  height: 100%;
+  width: 2rem;
+  float: right; }
+
+/*nav.scss*/
+/*_colors.scss*/
+.nav {
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: 100%;
+  width: 20%;
+  text-align: center;
+  font-family: 'Menu', Fallback, sans-serif;
+  color: #4fabd9;
+  background-color: #025e8d; }
+
+.nav > a {
+  text-decoration: none; }
+
+.nav > li {
+  list-style-type: none; }
+
+.nav > .profile-photo {
+  margin: 1em;
+  padding: .5em;
+  height: 30%;
+  background-color: red; }

@@ -1,0 +1,39 @@
+/*nav.scss*/
+
+@import 'theme/colors';
+
+.nav {
+
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: 100%;
+  width: 20%;
+
+  text-align: center;
+
+  font-family: 'Menu', Fallback, sans-serif;
+
+  color: $morning_menu;
+  background-color: $morning_body;
+}
+
+.nav > a {
+
+  text-decoration: none;
+}
+
+.nav > li {
+
+  list-style-type: none;
+}
+
+.nav > .profile-photo {
+
+  margin: 1em;
+  padding: .5em;
+  height: 30%;
+
+  background-color: red;
+}
+
