@@ -13,6 +13,12 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: 'Content';
+  src: url("../resources/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 /*app.scss*/
 /*_colors.scss*/
 /*fonts.scss*/
@@ -28,36 +34,35 @@
   font-style: normal;
   font-weight: normal; }
 
-html {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: #c9fcfd; }
+@font-face {
+  font-family: 'Content';
+  src: url("../resources/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
-body {
-  margin: inherit;
-  padding: inherit;
-  height: inherit; }
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 #root {
-  margin: 0;
-  padding: 0;
-  height: inherit; }
-
-.content {
-  width: 80%;
   height: 100%;
-  background-color: green; }
+  width: 100%; }
 
-.content > .title {
-  margin: auto;
-  text-align: center;
-  white-space: pre-wrap;
-  font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem;
-  display: block; }
+.page-whole {
+  height: 100%;
+  background-color: #025e8d; }
 
-/*sidebar.scss*/
+.page-main {
+  height: 100%;
+  width: 80%;
+  background-color: #c9fcfd; }
+
+/*content.scss*/
 /*_colors.scss*/
 /*fonts.scss*/
 @font-face {
@@ -72,32 +77,79 @@ body {
   font-style: normal;
   font-weight: normal; }
 
-.sidebar {
-  height: 100%;
-  width: 2rem;
-  float: right; }
+@font-face {
+  font-family: 'Content';
+  src: url("../resources/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
-/*nav.scss*/
+/*card.scss*/
+.content {
+  height: 80%;
+  width: 100%;
+  z-index: 1; }
+
+.title {
+  text-align: center;
+  white-space: pre-wrap;
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 6rem; }
+
+.content > h1 {
+  margin: auto;
+  text-align: center;
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 4rem; }
+
+.content > .card {
+  height: 80%;
+  margin: 1rem;
+  align-items: center;
+  background-color: orange;
+  overflow-y: scroll;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s; }
+  .content > .card p {
+    padding: 1.2rem;
+    font-family: 'Content', Fallback, sans-serif; }
+
+/*menu.scss*/
 /*_colors.scss*/
-.nav {
+/*card.scss*/
+.menu {
   margin: 0;
   padding: 0;
   float: right;
   height: 100%;
   width: 20%;
+  z-index: 3;
   text-align: center;
   font-family: 'Menu', Fallback, sans-serif;
-  color: #4fabd9;
-  background-color: #025e8d; }
+  color: #025e8d;
+  background-color: #4fabd9;
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3); }
 
-.nav > a {
-  text-decoration: none; }
+.menu > h1 {
+  margin: auto; }
 
-.nav > li {
-  list-style-type: none; }
+.menu > nav ul {
+  margin-top: .6rem 0 0 0;
+  list-style: none;
+  padding: 0; }
+  .menu > nav ul li {
+    margin: 1rem; }
+  .menu > nav ul a {
+    font-size: 1.4rem;
+    text-decoration: none; }
 
-.nav > .profile-photo {
-  margin: 1em;
-  padding: .5em;
-  height: 30%;
+.menu > .profile-photo {
+  margin: 2em;
+  padding: 0;
+  height: 32%;
+  clip-path: circle(6rem at center);
   background-color: red; }
+  .menu > .profile-photo img {
+    margin: 0;
+    padding: 0;
+    width: 100%; }

@@ -3,47 +3,42 @@
 @import 'theme/colors';
 @import 'theme/fonts';
 
-html {
-
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: $day_body;
-
+* {
+  box-sizing: border-box;
 }
 
-body {
+//fuck html
 
-  margin: inherit;
-  padding: inherit;
-  height: inherit;
+html, body {
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
 }
 
 #root {
-
-  margin: 0;
-  padding: 0;
-  height: inherit;
-}
-
-.content {
-
-  width: 80%;
+  
   height: 100%;
-  background-color: green;
+  width: 100%;
+
 }
 
+.page-whole {
 
-.content > .title {
+  height: 100%;
 
-  margin: auto;
-
-  text-align: center;
-  white-space: pre-wrap;
-
-  font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem;
-
-  display: block;
+  background-color: $morning-body;
 }
 
+.page-main {
+  
+
+  height: 100%;
+  width: 80%;
+
+
+  background-color: $day-body;
+
+}

@@ -1,0 +1,57 @@
+/*content.scss*/
+
+@import 'theme/colors';
+@import 'theme/fonts';
+@import 'mixins/card';
+
+
+.content {
+
+  height: 80%;
+  width: 100%;
+
+  z-index: 1;
+}
+
+
+.title {
+
+  text-align: center;
+  white-space: pre-wrap;
+
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 6rem;
+
+}
+
+.content > h1 {
+  
+  margin: auto;
+  text-align: center;
+
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 4rem;
+}
+
+
+
+.content > .card {
+
+  height: 80%;
+
+  margin: 1rem;
+  align-items: center;
+
+  background-color: orange;
+
+  overflow-y: scroll;
+
+  @include depth(3);
+  @include slideOut(1s);
+
+  p {
+    
+    padding: 1.2rem;
+    font-family: 'Content', Fallback, sans-serif;
+  }
+}

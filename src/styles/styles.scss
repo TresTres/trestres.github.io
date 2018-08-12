@@ -3,8 +3,9 @@
 @import 'theme/colors';
 @import 'theme/fonts';
 
+//@import 'modules/reset';
 @import 'modules/app';
-@import 'modules/sidebar';
-@import 'modules/nav';
+@import 'modules/content';
+@import 'modules/menu';
 
 
