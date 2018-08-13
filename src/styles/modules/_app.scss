@@ -9,13 +9,14 @@
 
 //fuck html
 
+
 html, body {
 
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-
+  overflow: hidden;
 }
 
 #root {
@@ -29,16 +30,25 @@ html, body {
 
   height: 100%;
 
-  background-color: $morning-body;
+  background-color: $day_body;
 }
 
-.page-main {
+main {
   
 
   height: 100%;
   width: 80%;
 
+}
 
-  background-color: $day-body;
+.title {
+
+  text-align: center;
+  white-space: pre-wrap;
+
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 6rem;
 
 }
+
+

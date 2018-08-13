@@ -7,26 +7,33 @@
 
 .content {
 
-  height: 80%;
+  height: 100%;
   width: 100%;
 
   z-index: 1;
+
+  div {
+
+    height: 100%;
+    position: relative;
+    
+    margin: 0;
+
+  }
+
+  .page {
+    
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+  }
 }
 
 
-.title {
-
-  text-align: center;
-  white-space: pre-wrap;
-
-  font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem;
-
-}
-
-.content > h1 {
+.content h1 {
   
-  margin: auto;
+  margin: 0;
   text-align: center;
 
   font-family: 'Title', Fallback, sans-serif;
@@ -35,23 +42,23 @@
 
 
 
-.content > .card {
+.content .card {
 
-  height: 80%;
+  position: absolute;
+  height: 55%;
+  width: 90%;
 
-  margin: 1rem;
-  align-items: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 
+  
   background-color: orange;
 
   overflow-y: scroll;
 
   @include depth(3);
-  @include slideOut(1s);
-
-  p {
-    
-    padding: 1.2rem;
-    font-family: 'Content', Fallback, sans-serif;
-  }
+  
+  padding: 1.2rem;
+  font-family: 'Content', Fallback, sans-serif;
 }

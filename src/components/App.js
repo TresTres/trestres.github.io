@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Layout from 'components/Layout';
 
@@ -15,44 +15,39 @@ import Links from 'components/Links';
 
 
 
-const App = () => {
+const App = ({ location }) => {
 
-  const currentKey = window.location.pathname.split('/')[1] || '/';
+  const currentKey = location.pathname.split('/')[1] || '/';
   const timeout = { 
-    enter: 300,
-    exit: 200
+    enter: 2000,
+    exit: 3000
   };
-
-  const Fragment = React.Fragment;
-
   
   return (
     <Layout>
-      <TransitionGroup component="main" className="page-main">
-        <CSSTransition 
-          key={currentKey} 
-          timeout={timeout} 
-          classNames="slide" 
-          appear
-        >
-          <Fragment>
-            <div className="title">
-              {'My name is Ez and'}
-            </div>
-            <section className="content">
-              <Switch>
-                <Route path="/home" component={Home}/>
+      <main>
+        <div className="title">
+          {'My name is Ez and'}
+        </div>
+        <section className="content">
+          <TransitionGroup>
+            <CSSTransition
+              key={currentKey}
+              timeout={timeout}
+              classNames="slide"
+            >
+              <Switch location={location}>
+                <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/skills" component={Skills}/>
                 <Route path="/resumes" component={Resumes}/>
                 <Route path="/friends" component={Friends}/>
                 <Route path="/links" component={Links}/>
-                <Redirect to="/home"/>
               </Switch>
-            </section>
-          </Fragment>
-        </CSSTransition>
-      </TransitionGroup>
+            </CSSTransition>
+          </TransitionGroup>
+        </section>
+      </main>
     </Layout>
   );  
 };

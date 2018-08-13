@@ -19,6 +19,21 @@
   font-style: normal;
   font-weight: normal; }
 
+/*animations.scss*/
+.slide-enter {
+  transform: translate(150%, 0%); }
+
+.slide-enter.slide-enter-active {
+  transform: translate(0%, 0%);
+  transition: transform 1s ease; }
+
+.slide-exit {
+  transform: translate(0%, 0%); }
+
+.slide-exit.slide-exit-active {
+  transform: translate(-150%, 0%);
+  transition: transform 1s ease; }
+
 /*app.scss*/
 /*_colors.scss*/
 /*fonts.scss*/
@@ -47,7 +62,8 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
 
 #root {
   height: 100%;
@@ -55,12 +71,17 @@ html, body {
 
 .page-whole {
   height: 100%;
-  background-color: #025e8d; }
-
-.page-main {
-  height: 100%;
-  width: 80%;
   background-color: #c9fcfd; }
+
+main {
+  height: 100%;
+  width: 80%; }
+
+.title {
+  text-align: center;
+  white-space: pre-wrap;
+  font-family: 'Title', Fallback, sans-serif;
+  font-size: 6rem; }
 
 /*content.scss*/
 /*_colors.scss*/
@@ -85,34 +106,36 @@ html, body {
 
 /*card.scss*/
 .content {
-  height: 80%;
+  height: 100%;
   width: 100%;
   z-index: 1; }
+  .content div {
+    height: 100%;
+    position: relative;
+    margin: 0; }
+  .content .page {
+    height: 100%;
+    width: 100%;
+    position: absolute; }
 
-.title {
-  text-align: center;
-  white-space: pre-wrap;
-  font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem; }
-
-.content > h1 {
-  margin: auto;
+.content h1 {
+  margin: 0;
   text-align: center;
   font-family: 'Title', Fallback, sans-serif;
   font-size: 4rem; }
 
-.content > .card {
-  height: 80%;
-  margin: 1rem;
-  align-items: center;
+.content .card {
+  position: absolute;
+  height: 55%;
+  width: 90%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   background-color: orange;
   overflow-y: scroll;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-  -webkit-transition: -webkit-transform 1s;
-  transition: transform 1s; }
-  .content > .card p {
-    padding: 1.2rem;
-    font-family: 'Content', Fallback, sans-serif; }
+  padding: 1.2rem;
+  font-family: 'Content', Fallback, sans-serif; }
 
 /*menu.scss*/
 /*_colors.scss*/
@@ -134,7 +157,7 @@ html, body {
   margin: auto; }
 
 .menu > nav ul {
-  margin-top: .6rem 0 0 0;
+  margin-top: .6rem;
   list-style: none;
   padding: 0; }
   .menu > nav ul li {

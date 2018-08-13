@@ -10,14 +10,14 @@ class Home extends React.Component {
     const Fragment = React.Fragment;
 
     return (
-      <Fragment>
+      <div className="page">
         <h1>
           {'Here are some artists I like'}
         </h1>
         <div className="card">
           {'Eric Whitacre'}
         </div>
-      </Fragment>
+      </div>
     );
   }
 

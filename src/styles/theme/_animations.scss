@@ -1,0 +1,27 @@
+/*animations.scss*/
+
+//Slide
+
+
+
+.slide-enter {
+  
+  transform: translate(150%, 0%);
+}
+
+.slide-enter.slide-enter-active {
+  
+  transform: translate(0%, 0%);
+  transition: transform 1s ease;
+}
+
+.slide-exit {
+
+  transform: translate(0%, 0%);
+}
+
+.slide-exit.slide-exit-active {
+
+  transform: translate(-150%, 0%);
+  transition: transform 1s ease;
+}

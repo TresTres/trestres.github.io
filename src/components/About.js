@@ -14,16 +14,14 @@ class AboutMe extends React.Component {
     const text = require('resources/AboutMe.md');
 
     return (
-      <Fragment>
+      <div className="page">
         <h1>
           {'this is my bio:'}
         </h1>
         <div className="card">
-          <p>
-            <ReactMarkdown source={text} />
-          </p>
+          <ReactMarkdown source={text} />
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

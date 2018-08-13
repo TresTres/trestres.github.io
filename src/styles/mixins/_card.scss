@@ -37,8 +37,3 @@
   }
 }
 
-//Slide out
-@mixin slideOut($timing) {
-  -webkit-transition: -webkit-transform $timing;
-  transition: transform $timing; 
-}
