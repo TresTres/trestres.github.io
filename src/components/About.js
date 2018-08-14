@@ -10,7 +10,6 @@ class AboutMe extends React.Component {
 
   render() {
 
-    const Fragment = React.Fragment;
     const text = require('resources/AboutMe.md');
 
     return (

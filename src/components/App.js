@@ -30,7 +30,7 @@ const App = ({ location }) => {
           {'My name is Ez and'}
         </div>
         <section className="content">
-          <TransitionGroup>
+          <TransitionGroup appear>
             <CSSTransition
               key={currentKey}
               timeout={timeout}

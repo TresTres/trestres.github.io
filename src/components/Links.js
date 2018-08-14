@@ -7,7 +7,7 @@ class Links extends React.Component {
   render() {
     
     return (
-      <div>
+      <div className="page">
         <h1>
           {'Here\'s how to contact me:'}
         </h1>

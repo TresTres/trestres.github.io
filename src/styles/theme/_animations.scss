@@ -4,12 +4,12 @@
 
 
 
-.slide-enter {
+.slide-appear,.slide-enter {
   
   transform: translate(150%, 0%);
 }
 
-.slide-enter.slide-enter-active {
+.slide-appear-active, .slide-enter-active {
   
   transform: translate(0%, 0%);
   transition: transform 1s ease;

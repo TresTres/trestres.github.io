@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
 
-  z-index: 1;
+  
 
   div {
 
@@ -23,12 +23,14 @@
 
   .page {
     
+    position: absolute;
     height: 100%;
     width: 100%;
 
-    position: absolute;
+    z-index: 0;
   }
 }
+
 
 
 .content h1 {
@@ -45,20 +47,30 @@
 .content .card {
 
   position: absolute;
-  height: 55%;
+  height: 60%;
   width: 90%;
 
   top: 40%;
   left: 50%;
+
   transform: translate(-50%, -40%);
 
-  
   background-color: orange;
-
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @include depth(3);
-  
-  padding: 1.2rem;
+   
   font-family: 'Content', Fallback, sans-serif;
+  
+  h3 {
+
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+  p {
+
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
 }
