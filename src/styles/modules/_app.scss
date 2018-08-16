@@ -30,7 +30,7 @@ html, body {
 
   height: 100%;
 
-  background-color: $day_body;
+  background-color: $morning_body;
 }
 
 main {
@@ -49,8 +49,8 @@ main {
   white-space: pre-wrap;
 
   font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem;
-
+  font-size: 7rem;
+  color: $morning_light;
 }
 
 

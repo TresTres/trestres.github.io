@@ -3,7 +3,7 @@
 /*fonts.scss*/
 @font-face {
   font-family: 'Title';
-  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  src: url("../resources/fonts/Mosk_Extra_Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -39,7 +39,7 @@
 /*fonts.scss*/
 @font-face {
   font-family: 'Title';
-  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  src: url("../resources/fonts/Mosk_Extra_Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -71,7 +71,7 @@ html, body {
 
 .page-whole {
   height: 100%;
-  background-color: #c9fcfd; }
+  background-color: #025e8d; }
 
 main {
   height: 100%;
@@ -82,14 +82,15 @@ main {
   text-align: center;
   white-space: pre-wrap;
   font-family: 'Title', Fallback, sans-serif;
-  font-size: 6rem; }
+  font-size: 7rem;
+  color: #04a2f1; }
 
 /*content.scss*/
 /*_colors.scss*/
 /*fonts.scss*/
 @font-face {
   font-family: 'Title';
-  src: url("../resources/fonts/DODGE.ttf") format("truetype");
+  src: url("../resources/fonts/Mosk_Extra_Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -106,6 +107,7 @@ main {
   font-weight: normal; }
 
 /*card.scss*/
+/*adjust.scss*/
 .content {
   height: 100%;
   width: 100%; }
@@ -123,7 +125,22 @@ main {
   margin: 0;
   text-align: center;
   font-family: 'Title', Fallback, sans-serif;
-  font-size: 4rem; }
+  font-size: 4rem;
+  color: #04a2f1;
+  text-transform: lowercase; }
+
+::-webkit-scrollbar {
+  width: 20px; }
+
+::-webkit-scrollbar-track {
+  background-color: #2e2e2e; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #025e8d;
+  transition: background-color .5s ease; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #04a2f1; }
 
 .content .card {
   position: absolute;
@@ -132,21 +149,69 @@ main {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
-  background-color: orange;
   overflow-y: auto;
+  background-color: #c9fcfd;
+  color: #011b28;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   font-family: 'Content', Fallback, sans-serif; }
+  .content .card a {
+    color: #04a2f1; }
+  .content .card a:visited {
+    color: #04a2f1; }
+  .content .card a:hover {
+    color: #04a2f1; }
+  .content .card a:active {
+    color: #04a2f1; }
   .content .card h3 {
     text-align: center;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0rem;
     font-size: 1.6rem; }
   .content .card p {
-    padding: 1rem;
+    margin: 1rem;
+    padding: .5rem;
     font-size: 1.3rem; }
+  .content .card .vr {
+    margin: 0;
+    padding: 0;
+    width: 2px;
+    background-color: #011b28;
+    height: 45%;
+    float: left; }
+  .content .card .half {
+    float: left;
+    width: 49%;
+    height: 40%;
+    text-align: center; }
+    .content .card .half h3 {
+      margin: 1rem;
+      padding: 0.5rem; }
+    .content .card .half .btn {
+      display: block;
+      margin: auto;
+      padding: 0.5rem;
+      width: 40%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+      background-color: #011b28;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: background-color .5s ease, color .5s ease; }
+      .content .card .half .btn a {
+        color: #04a2f1; }
+      .content .card .half .btn a:visited {
+        color: #04a2f1; }
+      .content .card .half .btn a:hover {
+        color: #04a2f1; }
+      .content .card .half .btn a:active {
+        color: #04a2f1; }
+    .content .card .half .btn:hover {
+      background-color: #04a2f1;
+      color: #011b28; }
 
 /*menu.scss*/
 /*_colors.scss*/
 /*card.scss*/
+/*adjust.scss*/
 .menu {
   position: relative;
   margin: 0;
@@ -157,12 +222,25 @@ main {
   z-index: 3;
   text-align: center;
   font-family: 'Menu', Fallback, sans-serif;
-  color: #025e8d;
-  background-color: #4fabd9;
+  color: #616161;
+  background-color: black;
   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3); }
 
 .menu > h1 {
-  margin: auto; }
+  margin: auto;
+  font-size: 2rem; }
+
+.menu > nav a {
+  color: #616161; }
+
+.menu > nav a:visited {
+  color: #616161; }
+
+.menu > nav a:hover {
+  color: #616161; }
+
+.menu > nav a:active {
+  color: #616161; }
 
 .menu > nav ul {
   margin-top: .6rem;
@@ -175,12 +253,65 @@ main {
     text-decoration: none; }
 
 .menu > .profile-photo {
-  margin: 2em;
+  margin: auto;
+  margin-bottom: 2em;
   padding: 0;
-  height: 32%;
-  clip-path: circle(6rem at center);
-  background-color: red; }
+  width: 250px;
+  height: 250px; }
   .menu > .profile-photo img {
-    margin: 0;
+    margin: auto;
     padding: 0;
-    width: 100%; }
+    height: auto;
+    width: 250px;
+    clip-path: circle(120px at center); }
+
+/*gallery-grid.scss*/
+/*_colors.scss*/
+/*fonts.scss*/
+@font-face {
+  font-family: 'Title';
+  src: url("../resources/fonts/Mosk_Extra_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Menu';
+  src: url("../resources/fonts/Queen_of_Camelot.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Content';
+  src: url("../resources/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/*adjust.scss*/
+/*card.scss*/
+.content .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  width: 70%;
+  margin: auto; }
+  .content .gallery-grid .badge {
+    margin: auto;
+    margin-bottom: 1.5em;
+    height: 190px;
+    width: 190px;
+    overflow: hidden;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.23)); }
+    .content .gallery-grid .badge .badge-container {
+      position: relative;
+      clip-path: circle(95px at center);
+      background: #025e8d; }
+      .content .gallery-grid .badge .badge-container img {
+        position: absolute;
+        margin: auto;
+        height: auto;
+        width: 190px;
+        clip-path: circle(90px at center); }
+      .content .gallery-grid .badge .badge-container h4 {
+        position: relative;
+        margin: auto;
+        top: -50%; }

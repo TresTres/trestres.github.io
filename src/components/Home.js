@@ -4,18 +4,39 @@ import React from 'react';
 
 class Home extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: new Date().toLocaleTimeString()
+    };
+
+    this.tick = this.tick.bind(this);
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(
+      () => this.tick(), 
+      1000);
+  }
+
+  tick = () => {
+    this.setState({
+      time: new Date().toLocaleTimeString()
+    });
+  }
   
   render() {
 
-    const Fragment = React.Fragment;
 
     return (
       <div className="page">
         <h1>
-          {'Here are some artists I like'}
+          {'It is ' + this.state.time}
         </h1>
         <div className="card">
-          {'Eric Whitacre'}
+          <h3>
+            {'In a hurry?  My TL;DR'}
+          </h3>
         </div>
       </div>
     );

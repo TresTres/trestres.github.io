@@ -3,11 +3,20 @@
 
 //use hsl 
 
+$d_val: 20%;
+$l_val: 20%;
 
 $morning_body: hsl(200, 97%, 28%);
 $day_body: hsl(181, 93%, 89%);
 $sunset_body: hsl(313, 82%, 27%);
 $night_body: hsl(0, 0%, 18%);
 
-$morning_menu: $morning_body + hsl(0, 0, 30%);
+$morning_light: lighten($morning_body, $l_val);
+$day_light: lighten($day_body, $l_val);
+$sunset_light: lighten($sunset_body, $l_val);
+$night_light: lighten($night_body, $l_val);
 
+$morning_dark: darken($morning_body, $d_val);
+$day_dark: darken($day_body, $d_val);
+$sunset_dark: darken($sunset_body, $d_val);
+$night_dark: darken($night_body, $d_val);

@@ -37,3 +37,8 @@
   }
 }
 
+//Card filter
+@mixin depth_filter($depth) {
+  
+  filter: drop-shadow(bot-shadow($depth)); 
+}

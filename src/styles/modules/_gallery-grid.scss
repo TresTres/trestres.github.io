@@ -1,0 +1,57 @@
+/*gallery-grid.scss*/
+
+@import 'theme/colors';
+@import 'theme/fonts';
+@import 'mixins/adjust';
+@import 'mixins/card';
+
+.content .gallery-grid {
+
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+
+  width: 70%;
+  margin: auto;
+
+  .badge {
+
+    margin: auto;
+    margin-bottom: 1.5em;
+    height: 190px;
+    width: 190px;
+    overflow: hidden;
+
+    @include depth_filter(3);     
+  
+    .badge-container {
+      
+      position: relative;
+      
+      clip-path: circle(95px at center);
+      background: $morning_body;
+      
+      img {
+
+        position: absolute;
+        margin: auto;
+      
+        height: auto;
+        width: 190px;
+
+        clip-path: circle(90px at center);
+      }
+
+      h4 {
+      
+        position: relative;
+        margin: auto;
+        top: -50%;
+
+      }
+    }
+  }
+}
+
+

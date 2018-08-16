@@ -1,0 +1,20 @@
+/*adjust.scss*/
+
+//Fix anchor colors
+@mixin a-fix($color) {
+  a {
+    color: $color;
+  }
+  
+  a:visited {
+    color: $color;
+  }
+
+  a:hover {
+    color: $color;
+  }
+
+  a:active {
+    color: $color;
+  }
+}

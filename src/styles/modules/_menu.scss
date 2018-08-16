@@ -2,6 +2,7 @@
 
 @import 'theme/colors';
 @import 'mixins/card';
+@import 'mixins/adjust';
 
 .menu {
 
@@ -17,10 +18,12 @@
   text-align: center;
   font-family: 'Menu', Fallback, sans-serif;
 
-  color: $morning_body;
-  background-color: $morning_menu;
+  color: $night_light;
+  background-color: $night_dark;
 
   @include depth(5);
+
+
 
 }
 
@@ -29,10 +32,15 @@
 .menu > h1 {
   
   margin: auto;
+
+  font-size: 2rem;
 }
 
 
 .menu > nav {
+
+  @include a-fix($night_light);
+
   ul {
 
     margin-top: .6rem;
@@ -55,18 +63,23 @@
 
 .menu > .profile-photo {
 
-  margin: 2em;
+  margin: auto;
+  margin-bottom: 2em;
   padding: 0;
-  height: 32%;
-  clip-path: circle(6rem at center);
+  width: 250px;
+  height: 250px;
 
-  background-color: red;
-
+  //@include depth_filter(5);
+  
   img {
-    
-    margin: 0;
+      
+    margin: auto;
     padding: 0;
-    width: 100%;
+    height: auto;
+    width:  250px;
+  
+    
+    clip-path: circle(120px at center);
   }
 }
 

@@ -30,11 +30,11 @@ const Layout = ({ children }) => {
                 {'About me'}
               </NavLink>
             </li>
-            <li> 
+            {/*<li> 
               <NavLink to="/skills">
                 {'Skills and Interests'}
               </NavLink>
-            </li>
+            </li>*/}
             <li>
               <NavLink to="/resumes">
                 {'Resumes'}
