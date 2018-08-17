@@ -4,13 +4,13 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 
+const text = require('../resources/AboutMe.md');
 
 class AboutMe extends React.Component {
 
 
   render() {
 
-    const text = require('resources/AboutMe.md');
 
     return (
       <div className="page">
