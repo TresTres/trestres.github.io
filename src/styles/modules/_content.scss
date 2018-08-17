@@ -101,15 +101,35 @@
     margin: 1rem;
     padding: .5rem;
     font-size: 1.3rem;
+
+    white-space: pre-wrap;
   }
 
   .vr {
+    
     margin: 0;
     padding: 0;
-    width: 2px;
+    
     background-color: $morning_dark;
+  
+    width: 2px;
     height: 45%;
     float: left;
+  }
+
+  .hr {
+    
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 0;
+    
+    background-color: $morning_dark;
+
+    width: 70%;
+    height: 2px;
+    
+    
   }
 
   .half {
@@ -141,7 +161,7 @@
 
       transition: background-color .5s ease, color .5s ease;
     }
-    .btn:hover{
+    .btn:hover {
       
       background-color: $morning_light;
       color: $morning_dark;

@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
             </li>
             <li>
               <NavLink to="/about">
-                {'About me'}
+                {'About'}
               </NavLink>
             </li>
             {/*<li> 
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
             </li>
             <li>
               <NavLink to="/links">
-                {'Important Links'}
+                {'Contact'}
               </NavLink>
             </li>
           </ul>

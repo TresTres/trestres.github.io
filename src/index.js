@@ -8,6 +8,12 @@ import 'styles/styles.css';
 import App from 'components/App';
 import registerServiceWorker from './registerServiceWorker';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faInbox } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faInbox);
+
 ReactDOM.render((
   <HashRouter>
     <App />

@@ -35,8 +35,11 @@ class Home extends React.Component {
         </h1>
         <div className="card">
           <h3>
-            {'In a hurry?  My TL;DR'}
+            {'In a hurry? The TL;DR'}
           </h3>
+          <p>
+            {'My name is Ez and I study Materials Science Engineering and Computer Science at Rutgers Unversity.\n\nI stay up a lot to learn new technologies or mess around with side projects.  (A section for my past work will be added soon)\n\nDuring the daylight hours I attend classes and work as a research assistant and tutor.\n\nOver this summer I\'ve been working on the front-end for HackRU as part of the open source team.\n\nMy pastimes that don\'t involve computer screens include practicing filipino martial arts, eating at diners, and going to local music shows.'}
+          </p>
         </div>
       </div>
     );

@@ -170,14 +170,23 @@ main {
   .content .card p {
     margin: 1rem;
     padding: .5rem;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    white-space: pre-wrap; }
   .content .card .vr {
     margin: 0;
     padding: 0;
-    width: 2px;
     background-color: #011b28;
+    width: 2px;
     height: 45%;
     float: left; }
+  .content .card .hr {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 0;
+    background-color: #011b28;
+    width: 70%;
+    height: 2px; }
   .content .card .half {
     float: left;
     width: 49%;
@@ -250,14 +259,19 @@ main {
     margin: 1rem; }
   .menu > nav ul a {
     font-size: 1.4rem;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color .5s ease; }
+  .menu > nav ul a:hover {
+    color: #04a2f1; }
 
 .menu > .profile-photo {
   margin: auto;
   margin-bottom: 2em;
   padding: 0;
   width: 250px;
-  height: 250px; }
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
   .menu > .profile-photo img {
     margin: auto;
     padding: 0;
@@ -291,27 +305,92 @@ main {
 .content .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  width: 70%;
+  width: 80%;
   margin: auto; }
   .content .gallery-grid .badge {
     margin: auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     height: 190px;
     width: 190px;
     overflow: hidden;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.23)); }
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
     .content .gallery-grid .badge .badge-container {
-      position: relative;
       clip-path: circle(95px at center);
       background: #025e8d; }
       .content .gallery-grid .badge .badge-container img {
-        position: absolute;
         margin: auto;
         height: auto;
         width: 190px;
         clip-path: circle(90px at center); }
-      .content .gallery-grid .badge .badge-container h4 {
-        position: relative;
-        margin: auto;
-        top: -50%; }
+      .content .gallery-grid .badge .badge-container .badge-header {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background-color: #011b28;
+        color: #04a2f1;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .5s ease, visibility .5s ease; }
+        .content .gallery-grid .badge .badge-container .badge-header h4 {
+          line-height: 190px;
+          margin: auto;
+          vertical-align: middle;
+          font-size: 1rem;
+          text-transform: uppercase; }
+    .content .gallery-grid .badge .badge-container:hover .badge-header {
+      visibility: visible;
+      opacity: .8; }
+
+/*entry-grid.scss*/
+/*_colors.scss*/
+/*adjust.scss*/
+/*card.scss*/
+.content .entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: auto;
+  margin-top: 2em; }
+  .content .entry-grid .entry {
+    margin: auto;
+    margin-bottom: 2em;
+    height: 120px;
+    width: 320px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    background-color: #011b28;
+    transition: background-color .5s ease; }
+    .content .entry-grid .entry a {
+      color: #04a2f1;
+      transition: color .5s ease; }
+      .content .entry-grid .entry a .entry-icon {
+        display: block;
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        margin: 20px 10px 20px 10px; }
+        .content .entry-grid .entry a .entry-icon .icon {
+          display: block;
+          margin: auto;
+          height: 60px;
+          width: auto; }
+      .content .entry-grid .entry a .entry-icon + .entry-info {
+        display: block;
+        position: absolute;
+        left: 100px;
+        height: 120px;
+        width: 200px;
+        margin: 0 10px 0 10px; }
+        .content .entry-grid .entry a .entry-icon + .entry-info h2 {
+          font-size: 1.7rem;
+          margin: 10px 0 10px 0; }
+        .content .entry-grid .entry a .entry-icon + .entry-info h4 {
+          font-size: .9rem; }
+  .content .entry-grid .entry:hover {
+    background-color: #04a2f1; }
+    .content .entry-grid .entry:hover a {
+      color: #011b28; }

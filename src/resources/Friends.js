@@ -1,7 +1,7 @@
 //Friends.js
 
 
-const friends = {
+const rawFriends = {
   'Heman': {
     name: 'Heman Gandhi',
     img:  './Heman.jpg',
@@ -57,6 +57,10 @@ const friends = {
   }
   
 };
+
+const friends = {};
+Object.keys(rawFriends).sort()
+  .forEach(key => friends[key] = rawFriends[key]);
   
   
 export default friends;

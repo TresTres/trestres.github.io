@@ -10,47 +10,77 @@
   display: grid;
   
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-
-  width: 70%;
+  
+  width: 80%;
   margin: auto;
 
   .badge {
 
     margin: auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
+
     height: 190px;
     width: 190px;
-    overflow: hidden;
 
-    @include depth_filter(3);     
+    overflow: hidden;
   
+    border-radius: 50%;
+    @include depth(3);
+
     .badge-container {
-      
-      position: relative;
-      
+
       clip-path: circle(95px at center);
       background: $morning_body;
-      
-      img {
 
-        position: absolute;
+      img {
+        
         margin: auto;
-      
         height: auto;
         width: 190px;
 
         clip-path: circle(90px at center);
+
       }
 
-      h4 {
-      
-        position: relative;
-        margin: auto;
-        top: -50%;
 
+      .badge-header {
+        
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        
+        text-align: center; 
+        background-color: $morning_dark;
+        color: $morning_light;
+        visibility: hidden;
+        opacity: 0;
+
+        transition: opacity .5s ease, visibility .5s ease;
+
+        h4 {
+
+          line-height: 190px;
+          margin: auto;
+          vertical-align: middle;
+
+          font-size: 1rem;
+
+          text-transform: uppercase;
+        }
       }
     }
+
+
+    .badge-container:hover .badge-header {
+      visibility: visible;
+      opacity: .8;
+    }
+
   }
 }
 
