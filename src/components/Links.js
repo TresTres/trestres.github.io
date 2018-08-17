@@ -15,7 +15,7 @@ class Friends extends React.Component {
   makeLinks = (key, link) => {
 
 
-    let label = key.replace(/[^A-Za-z]./g, '');
+    let label = (key) ? key.replace(/[^A-Za-z]./g, '') : '';
     let icon = ['fab', link.type];
     if(link.type === 'inbox') {
       

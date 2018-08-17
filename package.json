@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://trestres.github.io/",
+  "homepage": "https://trestres.github.io",
   "repository": "http://github.com/trestres/trestres.github.io.git",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
@@ -63,6 +63,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
+    "build:clean": "rimraf npm-run-all build-css build-js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
   },
@@ -70,7 +71,9 @@
     "gh-pages": "^1.2.0",
     "node-sass": "^4.9.2",
     "raw-loader": "^0.5.1",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1"
   },
   "jest": {
     "collectCoverageFrom": [
