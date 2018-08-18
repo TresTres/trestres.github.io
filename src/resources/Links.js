@@ -48,7 +48,7 @@ const rawLinks = {
 
   'Twitter': {
     type: 'twitter',
-    url: '.',
+    url: 'https://twitter.com/trestres_tweets',
     handle: 'trestres_tweets (I don\'t tweet)'
   }
 };
