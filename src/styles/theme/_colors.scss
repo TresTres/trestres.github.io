@@ -1,4 +1,4 @@
-/*_colors.scss*/
+/*colors.scss*/
 
 
 //use hsl 
@@ -6,17 +6,14 @@
 $d_val: 20%;
 $l_val: 20%;
 
-$morning_body: hsl(200, 97%, 28%);
-$day_body: hsl(181, 93%, 89%);
-$sunset_body: hsl(313, 82%, 27%);
-$night_body: hsl(0, 0%, 18%);
+$primary: hsl(200, 97%, 28%);
+$primary_light: lighten($primary, $l_val);
+$primary_dark: darken($primary, $d_val);
 
-$morning_light: lighten($morning_body, $l_val);
-$day_light: lighten($day_body, $l_val);
-$sunset_light: lighten($sunset_body, $l_val);
-$night_light: lighten($night_body, $l_val);
+$secondary: hsl(181, 93%, 89%);
+$secondary_light: lighten($secondary, $l_val);
+$secondary_dark: darken($secondary, $d_val);
 
-$morning_dark: darken($morning_body, $d_val);
-$day_dark: darken($day_body, $d_val);
-$sunset_dark: darken($sunset_body, $d_val);
-$night_dark: darken($night_body, $d_val);
+$font: hsl(0, 0%, 18%);
+$font_light: lighten($font, $l_val);
+$font_dark: darken($font, $d_val);

@@ -15,8 +15,10 @@ import { faInbox } from '@fortawesome/free-solid-svg-icons';
 library.add(fab, faInbox);
 
 ReactDOM.render((
-  <HashRouter>
-    <App />
-  </HashRouter>
+  <div className="container-fluid">
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </div>
 ), document.getElementById('root'));
 registerServiceWorker();

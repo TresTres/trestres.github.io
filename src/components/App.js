@@ -4,7 +4,7 @@ import React from 'react';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import Layout from 'components/Layout';
+import Menu from 'components/Menu';
 
 import Home from 'components/Home';
 import About from 'components/About';
@@ -24,8 +24,8 @@ const App = ({ location }) => {
   };
   
   return (
-    <Layout>
-      <main>
+    <div className="row flex-column-reverse flex-md-row">
+      <div className="col-md-9 app">
         <div className="title">
           {'My name is Ez and'}
         </div>
@@ -47,8 +47,9 @@ const App = ({ location }) => {
             </CSSTransition>
           </TransitionGroup>
         </section>
-      </main>
-    </Layout>
+      </div>
+      <Menu />
+    </div>
   );  
 };
 

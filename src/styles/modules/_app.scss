@@ -3,54 +3,7 @@
 @import 'theme/colors';
 @import 'theme/fonts';
 
-* {
-  box-sizing: border-box;
-}
-
-//fuck html
-
-
-html, body {
-
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-
-}
-
-#root {
+.app {
   
-  height: 100%;
-  width: 100%;
+  background-color: $primary;
 }
-
-.page-whole {
-
-  height: 100%;
-
-  background-color: $morning_body;
-}
-
-main {
-  
-  height: 100%;
-  width: 80%;
-
-  z-index: 0;
-
-}
-
-
-.title {
-
-  text-align: center;
-  white-space: pre-wrap;
-
-  font-family: 'Title', Fallback, sans-serif;
-  font-size: 7rem;
-  color: $morning_light;
-}
-
-
